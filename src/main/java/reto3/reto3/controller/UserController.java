@@ -25,7 +25,7 @@ public class UserController {
     }
     @Autowired
     private SequenceGeneratorService service;
-    @PostMapping("/new")
+    @PostMapping("/all")
     @ResponseStatus(HttpStatus.CREATED)
     public User create(@RequestBody User user) {
         user.setId(service.getSequenceNumber(User.SEQUENCE_NAME));
